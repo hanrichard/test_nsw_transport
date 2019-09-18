@@ -1,0 +1,43 @@
+{
+	"name": "my",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"@material-ui/core": "^4.4.2",
+		"@material-ui/icons": "^4.4.1",
+		"enzyme": "^3.10.0",
+		"expect": "^24.9.0",
+		"json-loader": "^0.5.7",
+		"prop-types": "^15.7.2",
+		"react": "^16.9.0",
+		"react-dom": "^16.9.0",
+		"react-scripts": "3.1.1",
+		"react-test-renderer": "^16.9.0",
+		"styled-components": "^4.3.2"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"devDependencies": {
+		"enzyme": "^3.10.0",
+		"enzyme-adapter-react-16": "^1.14.0",
+		"jest": "^24.9.0",
+		"prettier": "^1.18.2",
+		"react-dom": "^16.9.0"
+	}
+}
