@@ -7,7 +7,23 @@ import Report from './Report';
 configure({ adapter: new Adapter() });
 
 function setup() {
-	const props = {};
+	const props = {
+		data: {
+			data: [
+				{
+					organisation: 'Westbus',
+					date: '25/09/2015',
+					busData: [
+						{
+							busId: '94811',
+							routeVariant: '664 2 1',
+							deviationFromTimetable: 164,
+						},
+					],
+				},
+			],
+		},
+	};
 
 	const shallowWrapper = shallow(<Reports {...props} data-test="test" />);
 	const mountWrapper = mount(<Reports {...props} data-test="test" />);
@@ -24,5 +40,9 @@ describe('Reports component', () => {
 
 	it('should render', () => {
 		expect(mountWrapper.exists('[data-test]')).toEqual(true);
+	});
+
+	it('should render correct organisation', () => {
+		expect(mountWrapper.text().includes('Westbus')).toBe(true);
 	});
 });

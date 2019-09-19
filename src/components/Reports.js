@@ -1,8 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 const Reports = props => {
-	return <div></div>;
+	const showReport = props.data.data.map(report => {
+		return <div key={report.organisation}>{report.organisation}</div>;
+	});
+
+	return (
+		<div className="Home">
+			Bus Reports
+			{showReport}
+		</div>
+	);
 };
 
 export default Reports;
