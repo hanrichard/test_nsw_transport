@@ -1,8 +1,9 @@
 import React from 'react';
+import Report from './Report';
 
 const Reports = props => {
 	const showReport = props.data.data.map(report => {
-		return <div key={report.organisation}>{report.organisation}</div>;
+		return <Report key={report.organisation} {...report} />;
 	});
 
 	return (

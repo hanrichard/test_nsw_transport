@@ -42,7 +42,7 @@ describe('Reports component', () => {
 		expect(mountWrapper.exists('[data-test]')).toEqual(true);
 	});
 
-	it('should render correct organisation', () => {
-		expect(mountWrapper.text().includes('Westbus')).toBe(true);
+	it('should render report component', () => {
+		expect(shallowWrapper.find(Report)).toHaveLength(1);
 	});
 });
