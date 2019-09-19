@@ -8,6 +8,7 @@ import TableRow from '@material-ui/core/TableRow';
 import styled from 'styled-components';
 import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
+import { formatStatusStrong, formatStatusRegular } from '../utility/utility';
 
 const Wrapper = styled.div`
 	display: flex;
@@ -25,7 +26,10 @@ const TableBox = ({ busData }) => {
 		return (
 			<TableRow key={showTableRow.busId}>
 				<TableCell className="tableCell-busId">{showTableRow.busId}</TableCell>
-				<TableCell className="tableCell-routeVariant">{showTableRow.routeVariant}</TableCell>
+				<TableCell className="tableCell-routeVariant">
+					<strong>{formatStatusStrong(showTableRow.routeVariant)}</strong>
+					{formatStatusRegular(showTableRow.routeVariant)}
+				</TableCell>
 				<TableCell className="tableCell-deviationFromTimetable">
 					<TableStatus status={showTableRow.deviationFromTimetable} />
 				</TableCell>

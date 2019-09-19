@@ -11,6 +11,6 @@ describe('utlity component', () => {
 	});
 	it('should render correct numbers format', () => {
 		expect(formatStatusStrong('123 2 3')).toBe('123');
-		expect(formatStatusRegular('123 2 3')).toBe('2 3');
+		expect(formatStatusRegular('123 2 3')).toBe(' 2 3');
 	});
 });
