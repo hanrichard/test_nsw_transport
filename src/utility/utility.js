@@ -16,5 +16,5 @@ export const formatStatusStrong = routeVariant => {
 };
 
 export const formatStatusRegular = routeVariant => {
-	return ' ' + routeVariant.split(' ')[1] + ' ' + routeVariant.split(' ')[2];
+	return routeVariant === 'UNKNOWN' ? '' : ' ' + routeVariant.split(' ')[1] + ' ' + routeVariant.split(' ')[2];
 };
