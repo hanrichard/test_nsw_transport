@@ -1,6 +1,7 @@
 import React from 'react';
 import Report from './Report';
 import PropTypes from 'prop-types';
+import Typography from '@material-ui/core/Typography';
 
 const Reports = props => {
 	const showReport = props.data.data.map(report => {
@@ -9,7 +10,9 @@ const Reports = props => {
 
 	return (
 		<div className="Home">
-			Bus Reports
+			<Typography variant="h4" component="h1" gutterBottom>
+				Bus Reports
+			</Typography>
 			{showReport}
 		</div>
 	);
