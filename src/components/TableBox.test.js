@@ -36,6 +36,6 @@ describe('Table item component', () => {
 	it('should render correct props', () => {
 		expect(mountWrapper.text().includes('94811')).toBe(true);
 		expect(mountWrapper.text().includes('664 2 1')).toBe(true);
-		expect(mountWrapper.text().includes(164)).toBe(true);
+		expect(mountWrapper.text().includes('Late')).toBe(true);
 	});
 });

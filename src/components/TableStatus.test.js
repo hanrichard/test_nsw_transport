@@ -26,6 +26,6 @@ describe('TableStatus component', () => {
 	});
 
 	it('should render correct props', () => {
-		expect(mountWrapper.text().includes(123)).toBe(true);
+		expect(mountWrapper.text().includes('Late')).toBe(true);
 	});
 });
