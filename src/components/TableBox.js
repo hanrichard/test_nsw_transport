@@ -17,8 +17,9 @@ const Wrapper = styled.div`
 
 	.MuiTableCell-head {
 		background-color: lightblue;
-		color: rgba(0, 0, 0, 0.87);
+		color: #000000;
 	}
+
 	.MuiTableCell-root {
 		padding: 10px;
 	}
