@@ -1,7 +1,7 @@
 import React from 'react';
 
-const TableStatus = props => {
-	return <div></div>;
+const TableStatus = ({ status }) => {
+	return <div>{status}</div>;
 };
 
 export default TableStatus;

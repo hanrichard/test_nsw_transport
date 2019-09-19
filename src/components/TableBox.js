@@ -1,4 +1,5 @@
 import React from 'react';
+import TableStatus from './TableStatus';
 
 const TableBox = props => {
 	const showTableRow = props.busData.map(item => {
@@ -6,7 +7,7 @@ const TableBox = props => {
 			<div key={item.busId}>
 				{item.busId}
 				{item.routeVariant}
-				{item.deviationFromTimetable}
+				<TableStatus status={item.deviationFromTimetable} />
 			</div>
 		);
 	});

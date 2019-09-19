@@ -6,7 +6,7 @@ import TableStatus from './TableStatus';
 configure({ adapter: new Adapter() });
 
 function setup() {
-	const props = {};
+	const props = { status: 123 };
 
 	const mountWrapper = mount(<TableStatus {...props} data-test="test" />);
 	const shallowWrapper = shallow(<TableStatus {...props} data-test="test" />);
@@ -23,5 +23,9 @@ describe('TableStatus component', () => {
 
 	it('should render', () => {
 		expect(mountWrapper.exists('[data-test]')).toEqual(true);
+	});
+
+	it('should render correct props', () => {
+		expect(mountWrapper.text().includes(123)).toBe(true);
 	});
 });
