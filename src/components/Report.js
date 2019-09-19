@@ -1,9 +1,11 @@
 import React from 'react';
+import TableBox from './TableBox';
 
-const Report = props => {
+const Report = ({ busData, organisation, date }) => {
 	return (
 		<div>
-			{props.organisation} {props.date}
+			{organisation} - {date}
+			<TableBox busData={busData} />
 		</div>
 	);
 };

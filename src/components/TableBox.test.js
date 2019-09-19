@@ -6,7 +6,15 @@ import TableBox from './TableBox';
 configure({ adapter: new Adapter() });
 
 function setup() {
-	const props = {};
+	const props = {
+		busData: [
+			{
+				busId: '94811',
+				routeVariant: '664 2 1',
+				deviationFromTimetable: 164,
+			},
+		],
+	};
 
 	const mountWrapper = mount(<TableBox {...props} data-test="test" />);
 	const shallowWrapper = shallow(<TableBox {...props} data-test="test" />);
