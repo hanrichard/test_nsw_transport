@@ -16,5 +16,9 @@ export const formatStatusStrong = routeVariant => {
 };
 
 export const formatStatusRegular = routeVariant => {
-	return routeVariant === 'UNKNOWN' ? '' : ' ' + routeVariant.split(' ')[1] + ' ' + routeVariant.split(' ')[2];
+	let num = '';
+	for (let i = 1; i < routeVariant.split(' ').length; i++) {
+		num += ' ' + routeVariant.split(' ')[i];
+	}
+	return routeVariant === 'UNKNOWN' ? '' : num;
 };

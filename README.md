@@ -37,3 +37,5 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 ## Assumptions:
 
 You’ll need to have Node 8.16.0 or Node 10.16.0 or later version on your local development machine (but it’s not required on the server).
+
+The routeVariant will always be three digitals.
