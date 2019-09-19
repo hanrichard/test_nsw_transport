@@ -19,6 +19,9 @@ const Wrapper = styled.div`
 		background-color: lightblue;
 		color: rgba(0, 0, 0, 0.87);
 	}
+	.MuiTableCell-root {
+		padding: 10px;
+	}
 `;
 
 const TableBox = ({ busData }) => {
