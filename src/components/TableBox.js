@@ -1,8 +1,9 @@
 import React from 'react';
 import TableStatus from './TableStatus';
+import PropTypes from 'prop-types';
 
-const TableBox = props => {
-	const showTableRow = props.busData.map(item => {
+const TableBox = ({ busData }) => {
+	const showTableRow = busData.map(item => {
 		return (
 			<div key={item.busId}>
 				{item.busId}
@@ -13,4 +14,9 @@ const TableBox = props => {
 	});
 	return <div>{showTableRow}</div>;
 };
+
+TableBox.propTypes = {
+	busData: PropTypes.array,
+};
+
 export default TableBox;

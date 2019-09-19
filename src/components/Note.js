@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
-const Note = props => {
+const Note = () => {
 	const [value, setValue] = useState('');
 	const [note, setNote] = useState('');
 
