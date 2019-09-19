@@ -12,17 +12,37 @@ const Note = () => {
 		setValue('');
 	};
 
-	return (
-		<div>
-			<div data-test-note="note">{note}</div>
-			<form>
-				<input id="input" value={value} onChange={e => setValue(e.target.value)} />
-				<button id="button" onClick={handleSubmit}>
-					submit
-				</button>
+	const showNote =
+		note === '' ? (
+			<form className="note">
+				<TextField
+					multiline
+					variant="outlined"
+					id="input"
+					placeholder="Enter notes here"
+					fullWidth
+					margin="normal"
+					inputProps={{
+						style: {
+							height: '40px',
+						},
+					}}
+					value={value}
+					InputLabelProps={{
+						shrink: true,
+					}}
+					onChange={e => setValue(e.target.value)}
+				/>
+				<Button onClick={handleSubmit} variant="contained" color="primary" type="submit" id="button">
+					Save notes
+				</Button>
 			</form>
-		</div>
-	);
+		) : (
+			<div data-test-note="note">
+				<strong>Note:</strong> {note}
+			</div>
+		);
+	return <div>{showNote}</div>;
 };
 
 export default Note;
